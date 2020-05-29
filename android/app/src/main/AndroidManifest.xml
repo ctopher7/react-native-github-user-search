@@ -4,14 +4,24 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-      android:name=".MainApplication"
-      android:label="@string/app_name"
-      android:icon="@mipmap/icon"
-      android:roundIcon="@mipmap/icon"
-      android:allowBackup="false"
-      android:theme="@style/AppTheme">
+    android:name=".MainApplication"
+    android:label="@string/app_name"
+    android:icon="@mipmap/icon"
+    android:roundIcon="@mipmap/icon"
+    android:allowBackup="false"
+    android:theme="@style/AppTheme">
+        <activity
+        android:name=".LaunchActivity"
+        android:label="@string/app_name"
+        android:theme="@style/LaunchTheme"
+        >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
-      <activity
+        <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
         android:configChanges="keyboard|keyboardHidden|screenSize|uiMode"
@@ -19,13 +29,13 @@
         android:windowSoftInputMode="adjustPan"
         android:screenOrientation="portrait"
         >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-      </activity>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            </intent-filter>
+        </activity>
 
-      <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
     </application>
 
 </manifest>
